@@ -51,6 +51,24 @@ if os.path.exists(PP):
 else:
     print("    (PREREG_be2h4_blind.json absent - run freeze_prediction.py)")
 
+print("")
+print("[5] Method validation on known data (BH3 -> B2H6)")
+VP=os.path.join(HERE,"results","method_validation_b2h6.json")
+if os.path.exists(VP):
+    v=json.load(open(VP,encoding="utf-8"))
+    check(v["inside_bands"]==v["of"],
+          "%d of %d quantities inside the SAME bands used for the prediction"
+          %(v["inside_bands"],v["of"]))
+    check(all(abs(t["error"])<=t["band"] for t in v["target"].values()),
+          "every error within its stated band")
+    check(abs(v["calibrant"]["scale"]-1.0)<0.05,
+          "calibrant offset %.2f%% (BeH2 was -1.99%%: offset is species-specific)"
+          %(100*(v["calibrant"]["computed"]-v["calibrant"]["measured"])/v["calibrant"]["measured"]))
+    worst=max(abs(t["error"])/t["band"] for t in v["target"].values())
+    check(worst<1.0,"worst band usage %.0f%% - metal-metal distance is the weak link"%(100*worst))
+else:
+    print("    (method_validation_b2h6.json absent)")
+
 check("not adequate" in g3["verdict"].lower(),"verdict records the failure explicitly")
 print("\n"+"="*68); print("verify: %d / %d checks passed"%(passed,total)); print("="*68)
 sys.exit(0 if passed==total else 1)

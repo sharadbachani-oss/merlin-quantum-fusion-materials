@@ -198,6 +198,51 @@ move, and in fusion materials the operating range contains no data at all.
 That is the entire argument of this track, reduced to five numbers and a
 hash.
 
+## Method validation on known data
+
+The prediction above rests on one assumption: that a systematic offset
+measured on a monomer transfers to its dimer. That assumption is testable
+on a case where **both** are measured, so we tested it before claiming
+anything.
+
+**The analogue.** Diborane. B₂H₆ is the direct structural counterpart of
+Be₂H₄, the same electron-deficient bridged hydride, and both it and its
+BH₃ monomer are experimentally characterised. We ran the **identical**
+technique: same theory, same basis, same derived constants, same
+calibrate-on-the-monomer-and-transfer procedure, same uncertainty bands,
+and a neutral starting geometry rather than one seeded from the answer.
+
+| quantity | predicted | measured | error | band | inside |
+|---|---:|---:|---:|---:|:--:|
+| r(B–B) | 1.835 Å | 1.770 Å | +0.065 | ±0.08 | yes |
+| r(B–H) bridging | 1.349 Å | 1.334 Å | +0.015 | ±0.06 | yes |
+| r(B–H) terminal | 1.178 Å | 1.187 Å | −0.010 | ±0.02 | yes |
+
+**Three of three inside the bands**, using the same bands quoted for the
+Be₂H₄ prediction. The technique does what it claims, and the bands are not
+decorative.
+
+**Two things the validation exposes, and both are worth stating.**
+
+The calibration offset is **not a constant**. The method runs 1.99% short
+on BeH₂ and 0.84% short on BH₃, a factor of two apart. It therefore has to
+be measured per system rather than assumed, which is what we did, and it is
+why a single global scale factor would have been the wrong construction.
+
+The metal–metal distance is the weakest link. Its error consumed **82% of
+its band** in the analogue, against 25% for the bridge and 48% for the
+terminal bond. If Be₂H₄ behaves like B₂H₆ the Be–Be prediction is the one
+most likely to sit near its edge, and a scorer should read it that way.
+
+**The frozen prediction is unchanged.** This validation was run after the
+freeze and adds evidence about the method, not a revision of the numbers.
+The hash in the record still covers exactly what was committed on
+2026-09-09.
+
+Receipt: `results/method_validation_b2h6.json`.
+
+---
+
 ## Reproduce it
 
 ```bash

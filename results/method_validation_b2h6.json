@@ -1,0 +1,44 @@
+{
+ "card": "method validation on measured data: BH3 -> B2H6",
+ "note": "identical technique, calibration transferred, neutral start geometry",
+ "start_geometry": [
+  1.0,
+  1.0,
+  0.75,
+  0.95
+ ],
+ "calibrant": {
+  "species": "BH3",
+  "computed": 1.18,
+  "measured": 1.19,
+  "scale": 1.0084745762711864
+ },
+ "target": {
+  "r_BB": {
+   "raw": 1.82,
+   "calibrated": 1.8354237288135593,
+   "measured": 1.77,
+   "error": 0.06542372881355929,
+   "band": 0.08,
+   "inside": true
+  },
+  "r_BHb": {
+   "raw": 1.337348122217996,
+   "calibrated": 1.3486815808808603,
+   "measured": 1.334,
+   "error": 0.014681580880860245,
+   "band": 0.06,
+   "inside": true
+  },
+  "r_BHt": {
+   "raw": 1.1676472069936192,
+   "calibrated": 1.1775425223071245,
+   "measured": 1.187,
+   "error": -0.009457477692875527,
+   "band": 0.02,
+   "inside": true
+  }
+ },
+ "inside_bands": 3,
+ "of": 3
+}
