@@ -69,6 +69,22 @@ if os.path.exists(VP):
 else:
     print("    (method_validation_b2h6.json absent)")
 
+print("")
+print("[6] Second transfer test (CH4 -> C2H6)")
+V2=os.path.join(HERE,"results","method_validation_c2h6.json")
+if os.path.exists(V2):
+    w=json.load(open(V2,encoding="utf-8"))
+    check(w["inside_bands"]==w["of"],"%d of %d inside band"%(w["inside_bands"],w["of"]))
+    check(w["target"]["r_CC"]["band_used_pct"]<10,
+          "unbridged heavy-atom distance uses %.0f%% of band vs 82%% for the bridged case"
+          %w["target"]["r_CC"]["band_used_pct"])
+    v1=json.load(open(os.path.join(HERE,"results","method_validation_b2h6.json"),encoding="utf-8"))
+    o1=100*(v1["calibrant"]["computed"]-v1["calibrant"]["measured"])/v1["calibrant"]["measured"]
+    o2=100*(w["calibrant"]["computed"]-w["calibrant"]["measured"])/w["calibrant"]["measured"]
+    check(o1*o2<0,"calibration offset changes SIGN across species (%.2f%% vs %+.2f%%)"%(o1,o2))
+else:
+    print("    (method_validation_c2h6.json absent)")
+
 check("not adequate" in g3["verdict"].lower(),"verdict records the failure explicitly")
 print("\n"+"="*68); print("verify: %d / %d checks passed"%(passed,total)); print("="*68)
 sys.exit(0 if passed==total else 1)

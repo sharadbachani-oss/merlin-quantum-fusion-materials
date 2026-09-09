@@ -1,0 +1,32 @@
+{
+ "card": "second transfer test: CH4 -> C2H6",
+ "note": "both measured to high precision; probes the heavy-atom separation",
+ "calibrant": {
+  "species": "CH4",
+  "computed": 1.1,
+  "measured": 1.087,
+  "scale": 0.988181818181818
+ },
+ "target": {
+  "r_CC": {
+   "raw": 1.5550000000000002,
+   "calibrated": 1.5366227272727273,
+   "measured": 1.5351,
+   "error": 0.0015227272727273977,
+   "band": 0.08,
+   "inside": true,
+   "band_used_pct": 1.9034090909092471
+  },
+  "r_CH": {
+   "raw": 1.1,
+   "calibrated": 1.087,
+   "measured": 1.094,
+   "error": -0.007000000000000117,
+   "band": 0.02,
+   "inside": true,
+   "band_used_pct": 35.00000000000058
+  }
+ },
+ "inside_bands": 2,
+ "of": 2
+}

@@ -222,17 +222,44 @@ and a neutral starting geometry rather than one seeded from the answer.
 Be₂H₄ prediction. The technique does what it claims, and the bands are not
 decorative.
 
+**A second transfer test, on a different bond type.** One analogue is a
+sample of one, so we ran the technique again on CH₄ → C₂H₆, where both are
+measured to high precision and the carbon–carbon separation probes the same
+heavy-atom quantity that was weakest in diborane.
+
+| quantity | predicted | measured | error | band | band used |
+|---|---:|---:|---:|---:|---:|
+| r(C–C) | 1.537 Å | 1.535 Å | +0.002 | ±0.08 | **2%** |
+| r(C–H) | 1.087 Å | 1.094 Å | −0.007 | ±0.02 | 35% |
+
+Two of two inside band, and the heavy-atom distance is near-exact.
+
+**Which sharpens the conclusion.** The heavy-atom weakness is **not** a
+general property of the technique. On an ordinary two-centre bond the
+carbon–carbon separation lands at 2% of its band; on the three-centre
+bridged boron system it consumed 82%. The difficulty is specific to
+electron-deficient bridged bonding. Be₂H₄ is exactly that kind of system,
+so diborane is the governing analogue and the Be–Be entry remains the one
+most likely to sit near its edge.
+
 **Two things the validation exposes, and both are worth stating.**
 
-The calibration offset is **not a constant**. The method runs 1.99% short
-on BeH₂ and 0.84% short on BH₃, a factor of two apart. It therefore has to
-be measured per system rather than assumed, which is what we did, and it is
-why a single global scale factor would have been the wrong construction.
+The calibration offset is **not a constant, and not even of fixed sign**:
+−1.99% on BeH₂, −0.84% on BH₃, **+1.20%** on CH₄. It therefore has to be
+measured per system rather than assumed, and a single global scale factor
+would have been the wrong construction.
 
-The metal–metal distance is the weakest link. Its error consumed **82% of
-its band** in the analogue, against 25% for the bridge and 48% for the
-terminal bond. If Be₂H₄ behaves like B₂H₆ the Be–Be prediction is the one
-most likely to sit near its edge, and a scorer should read it that way.
+The bridged metal–metal distance is the weakest link, consuming **82% of
+its band** against 25% for the bridge bond and 48% for the terminal bond,
+while the unbridged carbon–carbon case used 2%. A scorer should read the
+Be–Be entry as the one most likely to sit near its edge.
+
+One process note, because it nearly went the other way. The first ethane
+run returned a carbon–carbon distance of 1.9 Å and a flat failure on both
+entries. That was a sign error in our own geometry construction, which put
+the hydrogens on the wrong side of each carbon; a 1.9 Å C–C bond is not
+physical and the result was discarded and rerun rather than reported. The
+numbers above are from the corrected geometry.
 
 **The frozen prediction is unchanged.** This validation was run after the
 freeze and adds evidence about the method, not a revision of the numbers.
