@@ -1,0 +1,52 @@
+{
+ "card": "BLIND PREDICTION - frozen",
+ "frozen_utc": "2026-09-09T15:02:11Z",
+ "team": "Merlin Digital",
+ "track": "fusion structural materials",
+ "sha256": "cc9092bfa29e5e522c3a5cab57b048cc0f8f87378fefd4f7da0a3623d7bba497",
+ "prediction": {
+  "species": "Be2H4",
+  "state": "gas-phase equilibrium structure, D2h bridged, singlet ground state",
+  "registered_against": "absence of any experimental gas-phase structure determination we could locate as of 2026-09-09. Computational values exist in the literature (DFT/G4); this is registered as blind against EXPERIMENT only.",
+  "predicted": {
+   "r_Be_Be_ang": {
+    "value": 2.051,
+    "uncertainty": 0.08
+   },
+   "r_Be_Hbridge_ang": {
+    "value": 1.505,
+    "uncertainty": 0.06
+   },
+   "r_Be_Hterminal_ang": {
+    "value": 1.326,
+    "uncertainty": 0.02
+   },
+   "angle_Be_Hb_Be_deg": {
+    "value": 85.9,
+    "uncertainty": 4.0
+   },
+   "dimerisation_energy_eV": {
+    "value": -1.04,
+    "uncertainty": 0.5,
+    "reaction": "2 BeH2(g) -> Be2H4(g), electronic, no ZPE"
+   }
+  },
+  "method": {
+   "theory": "MP2, minimal basis, in-house engine",
+   "constants": "derived from the model's own structure, no CODATA input",
+   "calibration": {
+    "calibrant": "BeH2 monomer",
+    "computed_r_ang": 1.3,
+    "measured_r_ang": 1.326407,
+    "method_offset_pct": -1.99,
+    "scale_factor_applied": 1.02031
+   }
+  },
+  "falsified_if": [
+   "the equilibrium structure is not the D2h bridged form",
+   "any predicted distance falls outside its stated band",
+   "the dimerisation energy has the opposite sign, i.e. Be2H4 is unbound with respect to two monomers"
+  ],
+  "scoring_rule": "Score every entry. Do not score a subset. A hit on the terminal bond alone is not a success, because that bond is the calibrant's own bond type and is the easy case."
+ }
+}

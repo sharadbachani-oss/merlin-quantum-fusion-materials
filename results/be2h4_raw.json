@@ -1,0 +1,19 @@
+{
+ "raw": {
+  "r_BeBe": 2.01,
+  "r_BeHbridge": 1.47527116151574,
+  "r_BeHterm": 1.3,
+  "angle": 85.87977795255375,
+  "dimerisation_eV": -1.0370841346731472,
+  "E_dimer_Ha": -31.20582795305524,
+  "E_monomer_Ha": -15.583857907033439
+ },
+ "calibration_factor": 1.0203130769230768,
+ "calibrated": {
+  "r_BeBe": 2.0508292846153844,
+  "r_BeHbridge": 1.505238458102006,
+  "r_BeHterm": 1.326407,
+  "angle_BeHbBe_deg": 85.87977795255375,
+  "dimerisation_eV": -1.0370841346731472
+ }
+}

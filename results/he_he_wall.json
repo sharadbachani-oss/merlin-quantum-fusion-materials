@@ -1,0 +1,71 @@
+{
+ "card": "He-He interaction from derived constants (no fitting)",
+ "method": "MP2/6-31G** counterpoise-corrected",
+ "benchmark": "Przybytek/Cencek accurate ab initio He2",
+ "rows": [
+  {
+   "R_ang": 0.75,
+   "dE_eV_derived": 11.132512274390397,
+   "dE_eV_codata": 11.147225751515705,
+   "dE_eV_benchmark": 6.858,
+   "ratio": 1.6232884622908132
+  },
+  {
+   "R_ang": 1.0,
+   "dE_eV_derived": 4.130300290968634,
+   "dE_eV_codata": 4.13775915099359,
+   "dE_eV_benchmark": 1.429,
+   "ratio": 2.8903431007478195
+  },
+  {
+   "R_ang": 1.25,
+   "dE_eV_derived": 1.4905430946371703,
+   "dE_eV_codata": 1.4940058775772873,
+   "dE_eV_benchmark": 0.5706,
+   "ratio": 2.612238160948423
+  },
+  {
+   "R_ang": 1.5,
+   "dE_eV_derived": 0.5211647636961569,
+   "dE_eV_codata": 0.5226676825930655,
+   "dE_eV_benchmark": 0.256,
+   "ratio": 2.035799858188113
+  },
+  {
+   "R_ang": 1.75,
+   "dE_eV_derived": 0.17555053918111246,
+   "dE_eV_codata": 0.17616164520812602,
+   "dE_eV_benchmark": 0.1043,
+   "ratio": 1.6831307687546737
+  },
+  {
+   "R_ang": 2.0,
+   "dE_eV_derived": 0.05734746643448573,
+   "dE_eV_codata": 0.05758035521000234,
+   "dE_eV_benchmark": 0.0403,
+   "ratio": 1.423014055446296
+  },
+  {
+   "R_ang": 2.25,
+   "dE_eV_derived": 0.018451144948950702,
+   "dE_eV_codata": 0.018536297455460676,
+   "dE_eV_benchmark": 0.0146,
+   "ratio": 1.2637770512979933
+  },
+  {
+   "R_ang": 2.5,
+   "dE_eV_derived": 0.005819538505176829,
+   "dE_eV_codata": 0.00585036278647907,
+   "dE_eV_benchmark": 0.005766,
+   "ratio": 1.0092852072800604
+  },
+  {
+   "R_ang": 3.0,
+   "dE_eV_derived": 0.0004013297192021609,
+   "dE_eV_codata": 0.00040494121194296716,
+   "dE_eV_benchmark": 0.000718,
+   "ratio": 0.5589550406715333
+  }
+ ],
+ "repulsive_wall_mape_pct": 129.0417395543792
+}

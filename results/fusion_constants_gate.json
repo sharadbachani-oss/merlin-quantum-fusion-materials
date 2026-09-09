@@ -1,0 +1,95 @@
+{
+ "card": "fusion materials track - constants gate",
+ "engine": "in-house HF/MP2, STO-3G / 6-31G**, no external QC package",
+ "gate1_constants": [
+  {
+   "R_ang": 0.7414,
+   "E_derived_Ha": -1.1576168268841784,
+   "E_measured_Ha": -1.1576204583169842,
+   "diff_Ha": 3.631432805795143e-06,
+   "diff_meV": 0.09881632070484356,
+   "fraction_of_chemical_accuracy": 0.002278757908958045
+  },
+  {
+   "R_ang": 1.0,
+   "E_derived_Ha": -1.1266525810068335,
+   "E_measured_Ha": -1.126733472703024,
+   "diff_Ha": 8.08916961905215e-05,
+   "diff_meV": 2.2011751891333966,
+   "fraction_of_chemical_accuracy": 0.050760292788295316
+  },
+  {
+   "R_ang": 1.4,
+   "E_derived_Ha": -1.0505480484220846,
+   "E_measured_Ha": -1.050661007665729,
+   "diff_Ha": 0.00011295924364440602,
+   "diff_meV": 3.0737776088625974,
+   "fraction_of_chemical_accuracy": 0.07088297749412628
+  }
+ ],
+ "gate2_hydrogen": {
+  "R_e_ang": 0.74,
+  "R_e_experiment_ang": 0.7414,
+  "R_e_dev_pct": -0.18883193957377353,
+  "D_e_eV": 4.3855298303017145,
+  "D_e_experiment_eV": 4.478,
+  "scan": [
+   {
+    "R_ang": 0.68,
+    "E_Ha": -1.155328636982626
+   },
+   {
+    "R_ang": 0.7,
+    "E_Ha": -1.1567864484358292
+   },
+   {
+    "R_ang": 0.72,
+    "E_Ha": -1.1575250493133973
+   },
+   {
+    "R_ang": 0.74,
+    "E_Ha": -1.1576310670458654
+   },
+   {
+    "R_ang": 0.7414,
+    "E_Ha": -1.1576168268841784
+   },
+   {
+    "R_ang": 0.76,
+    "E_Ha": -1.1571807491733126
+   },
+   {
+    "R_ang": 0.78,
+    "E_Ha": -1.156241346091449
+   },
+   {
+    "R_ang": 0.8,
+    "E_Ha": -1.154872227649279
+   }
+  ]
+ },
+ "gate3_boundary": {
+  "rows": [
+   {
+    "R_ang": 1.0,
+    "dE_derived_eV": 4.130300290968634,
+    "dE_benchmark_eV": 1.429,
+    "ratio": 2.8903431007478195
+   },
+   {
+    "R_ang": 1.25,
+    "dE_derived_eV": 1.4905430946371703,
+    "dE_benchmark_eV": 0.5706,
+    "ratio": 2.612238160948423
+   },
+   {
+    "R_ang": 1.5,
+    "dE_derived_eV": 0.5211647636961569,
+    "dE_benchmark_eV": 0.256,
+    "ratio": 2.035799858188113
+   }
+  ],
+  "mean_abs_dev_pct": 151.27937066281186,
+  "verdict": "MP2/6-31G** is not adequate for the helium repulsive wall. This is a correlation-level and basis limit, not a constants limit: gate 1 shows the constants agree to 0.1-3 meV. Named as the build task, not a caveat."
+ }
+}
