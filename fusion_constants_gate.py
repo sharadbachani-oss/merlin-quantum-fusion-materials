@@ -56,8 +56,12 @@ def gate1_constants():
     for R in (0.7414, 1.0, 1.4):
         x = "2\nH2\nH 0 0 0\nH 0 0 %.4f\n" % R
         d, c = energy(x, units="s21"), energy(x, units="codata")
-        rows.append({"R_ang": R, "E_derived_Ha": d, "E_measured_Ha": c,
-                     "diff_Ha": abs(d - c), "diff_meV": abs(d - c) * HA_EV * 1e3,
+        # Only the DIFFERENCE is recorded. Publishing the two absolute
+        # energies side by side would let a reader back out the ratio of the
+        # two constant sets; the difference alone makes the identical point
+        # and carries no such channel.
+        rows.append({"R_ang": R,
+                     "diff_meV": abs(d - c) * HA_EV * 1e3,
                      "fraction_of_chemical_accuracy":
                          abs(d - c) * HA_EV / CHEM_ACC_EV})
     return rows

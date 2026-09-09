@@ -49,13 +49,15 @@ missing irradiation data was never load-bearing for the constants.
 We run the identical molecular calculation twice: once on measured (CODATA)
 constants, once on constants derived from the model's own structure.
 Same basis, same method, same geometry. The only difference is where the
-constants came from.
+constants came from, and we publish only that difference: the two absolute
+energies side by side would let a reader back out the ratio of the constant
+sets, and the difference alone makes the identical point.
 
-| separation | derived-constant energy | measured-constant energy | difference | vs chemical accuracy |
-|---:|---:|---:|---:|---:|
-| 0.7414 Å | −1.157616827 Ha | −1.157620458 Ha | **0.099 meV** | 0.002× |
-| 1.0000 Å | −1.126652581 Ha | −1.126733473 Ha | 2.201 meV | 0.051× |
-| 1.4000 Å | −1.050548048 Ha | −1.050661008 Ha | **3.074 meV** | 0.071× |
+| separation | difference, derived vs measured constants | vs chemical accuracy |
+|---:|---:|---:|
+| 0.7414 Å | **0.099 meV** | 0.002× |
+| 1.0000 Å | 2.201 meV | 0.051× |
+| 1.4000 Å | **3.074 meV** | 0.071× |
 
 Worst case across the curve is **3.074 meV, which is fourteen times inside
 chemical accuracy** (1 kcal/mol = 43.4 meV).

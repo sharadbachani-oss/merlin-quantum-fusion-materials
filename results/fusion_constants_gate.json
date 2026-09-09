@@ -4,25 +4,16 @@
  "gate1_constants": [
   {
    "R_ang": 0.7414,
-   "E_derived_Ha": -1.1576168268841784,
-   "E_measured_Ha": -1.1576204583169842,
-   "diff_Ha": 3.631432805795143e-06,
    "diff_meV": 0.09881632070484356,
    "fraction_of_chemical_accuracy": 0.002278757908958045
   },
   {
    "R_ang": 1.0,
-   "E_derived_Ha": -1.1266525810068335,
-   "E_measured_Ha": -1.126733472703024,
-   "diff_Ha": 8.08916961905215e-05,
    "diff_meV": 2.2011751891333966,
    "fraction_of_chemical_accuracy": 0.050760292788295316
   },
   {
    "R_ang": 1.4,
-   "E_derived_Ha": -1.0505480484220846,
-   "E_measured_Ha": -1.050661007665729,
-   "diff_Ha": 0.00011295924364440602,
    "diff_meV": 3.0737776088625974,
    "fraction_of_chemical_accuracy": 0.07088297749412628
   }
