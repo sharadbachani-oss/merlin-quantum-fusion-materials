@@ -85,6 +85,34 @@ if os.path.exists(V2):
 else:
     print("    (method_validation_c2h6.json absent)")
 
+print("")
+print("[7] Blind prediction v2 - frozen, and v1 left standing")
+P2=os.path.join(HERE,"results","PREREG_be2h4_blind_v2.json")
+if os.path.exists(P2):
+    import hashlib
+    r2=json.load(open(P2,encoding="utf-8"))
+    pay=json.dumps(r2["prediction"],sort_keys=True,separators=(",",":")).encode()
+    check(hashlib.sha256(pay).hexdigest()==r2["sha256"],
+          "v2 payload matches its frozen SHA-256 (%s...)"%r2["sha256"][:16])
+    check("stands" in r2["prediction"]["supersedes"],
+          "v2 explicitly does NOT supersede v1")
+    v2v=json.load(open(os.path.join(HERE,"results","method_validation_b2h6_v2.json"),encoding="utf-8"))
+    v1v=json.load(open(os.path.join(HERE,"results","method_validation_b2h6.json"),encoding="utf-8"))
+    w2=max(abs(t["error"]) for t in v2v["target"].values())
+    w1=max(abs(t["error"]) for t in v1v["target"].values())
+    check(w2<w1,"v2 validation worst error %.4f A beats v1's %.4f A"%(w2,w1))
+    check(abs(v2v["calibrant"]["offset_pct"])<abs(-1.99),
+          "v2 calibrant offset %+.2f%% beats v1's -1.99%%"%v2v["calibrant"]["offset_pct"])
+    v1p=json.load(open(os.path.join(HERE,"results","PREREG_be2h4_blind.json"),encoding="utf-8"))
+    d=abs(r2["prediction"]["predicted"]["r_Be_Be_ang"]["value"]
+          -v1p["prediction"]["predicted"]["r_Be_Be_ang"]["value"])
+    check(d<=v1p["prediction"]["predicted"]["r_Be_Be_ang"]["uncertainty"],
+          "v2 sits inside v1's band: the two levels agree (shift %.3f A)"%d)
+    check("separately" in r2["prediction"]["scoring_rule"],
+          "scoring rule forbids reporting only the closer version")
+else:
+    print("    (PREREG_be2h4_blind_v2.json absent)")
+
 check("not adequate" in g3["verdict"].lower(),"verdict records the failure explicitly")
 print("\n"+"="*68); print("verify: %d / %d checks passed"%(passed,total)); print("="*68)
 sys.exit(0 if passed==total else 1)

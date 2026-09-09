@@ -198,6 +198,66 @@ move, and in fusion materials the operating range contains no data at all.
 That is the entire argument of this track, reduced to five numbers and a
 hash.
 
+## Prediction v2 — better basis, same discipline
+
+v1 was computed in a minimal tabulated basis, which the diborane validation
+showed was the limiting factor. v2 changes **only the basis**, and the
+choice is deliberate and not the obvious one.
+
+**Why not 6-31G\*\* or a similar standard basis.** Tabulated basis sets carry
+exponents optimised against experimental data. Using one would inject fitted
+parameters into a track whose entire claim is that nothing is fitted. v2
+uses the engine's **first-principles generated basis** instead, which is
+constructed rather than fitted — and is also simply better: on H₂ it gives
+−0.19% against −1.54% for the tabulated alternative.
+
+**The calibrants improve sharply.**
+
+| calibrant | v1 offset | v2 offset |
+|---|---:|---:|
+| BeH₂ | −1.99% | **+0.27%** |
+| BH₃ | −0.84% | +0.84% |
+
+**And so does the validation.** Rerunning the diborane test at the v2 level:
+
+| quantity | v1 error | v2 error |
+|---|---:|---:|
+| r(B–B) | +0.0654 Å | **−0.0148 Å** |
+| r(B–H) bridging | +0.0147 Å | −0.0245 Å |
+| r(B–H) terminal | −0.0095 Å | **−0.0043 Å** |
+
+Worst error falls from 0.0654 Å to 0.0245 Å. The v2 bands are set at roughly
+twice the error this level actually made on the measured analogue, which is
+why they are tighter than v1's rather than tighter by assertion.
+
+**v2, frozen 2026-09-09T22:13:39Z, SHA-256
+`e05a671dc31387970b0819be539752552cbc024712e29454223fcd4d776b54f6`.**
+
+| quantity | v1 | v2 | band |
+|---|---:|---:|---:|
+| r(Be–Be) | 2.051 Å | **2.005 Å** | ±0.03 |
+| r(Be–H) bridging | 1.505 Å | **1.460 Å** | ±0.05 |
+| r(Be–H) terminal | 1.326 Å | **1.321 Å** | ±0.01 |
+| angle Be–H_b–Be | 85.9° | **86.7°** | ±3.0 |
+| dimerisation energy | −1.04 eV | **−1.15 eV** | ±0.50 |
+
+The energy band is deliberately **not** tightened: no measured dimerisation
+energy was used to validate this level, so tightening it would be assertion.
+
+**The result worth noticing.** v2 moved the Be–Be distance down by 0.046 Å,
+which is the direction the diborane bias predicted — and **no bias
+correction was applied**. The shift came from the basis alone. Two
+independent routes, an analogue's measured error and an improved
+calculation, point the same way. Every v2 value also sits inside v1's bands,
+so the two levels agree.
+
+**v1 is not withdrawn.** It stands frozen exactly as registered, and the two
+are scored separately. Reporting only whichever lands closer would be the
+same error as bias-correcting, arriving later. That instruction is written
+into both frozen records.
+
+---
+
 ## Method validation on known data
 
 The prediction above rests on one assumption: that a systematic offset

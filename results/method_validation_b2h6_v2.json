@@ -1,0 +1,30 @@
+{
+ "level": "MP2 / first-principles generated basis",
+ "calibrant": {
+  "species": "BH3",
+  "computed": 1.2,
+  "measured": 1.19,
+  "scale": 0.9916666666666667,
+  "offset_pct": 0.8403361344537823
+ },
+ "target": {
+  "r_BB": {
+   "raw": 1.77,
+   "calibrated": 1.75525,
+   "measured": 1.77,
+   "error": -0.01475000000000004
+  },
+  "r_BHb": {
+   "raw": 1.3204639336233308,
+   "calibrated": 1.3094600675098031,
+   "measured": 1.334,
+   "error": -0.024539932490196925
+  },
+  "r_BHt": {
+   "raw": 1.1925980043585516,
+   "calibrated": 1.1826596876555637,
+   "measured": 1.187,
+   "error": -0.004340312344436326
+  }
+ }
+}

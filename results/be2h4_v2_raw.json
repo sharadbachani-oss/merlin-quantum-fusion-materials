@@ -1,0 +1,22 @@
+{
+ "level": "MP2 / first-principles generated basis",
+ "calibrant": {
+  "computed": 1.33,
+  "measured": 1.326407,
+  "scale": 0.9972984962406014,
+  "offset_pct": 0.27088216512730856
+ },
+ "raw": {
+  "r_BeBe": 2.01,
+  "r_BeHbridge": 1.4643257834238936,
+  "r_BeHterm": 1.3250000000000002,
+  "angle": 86.67943526203439
+ },
+ "calibrated": {
+  "r_BeBe": 2.0045699774436088,
+  "r_BeHbridge": 1.4603699018149896,
+  "r_BeHterm": 1.321420507518797,
+  "angle": 86.67943526203439,
+  "dimerisation_eV": -1.1508987034320521
+ }
+}

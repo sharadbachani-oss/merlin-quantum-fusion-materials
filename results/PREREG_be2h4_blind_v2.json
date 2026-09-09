@@ -1,0 +1,65 @@
+{
+ "card": "BLIND PREDICTION v2 - frozen",
+ "frozen_utc": "2026-09-09T22:13:39Z",
+ "team": "Merlin Digital",
+ "track": "fusion structural materials",
+ "sha256": "e05a671dc31387970b0819be539752552cbc024712e29454223fcd4d776b54f6",
+ "prediction": {
+  "species": "Be2H4",
+  "version": 2,
+  "supersedes": "nothing - v1 (sha256 cc9092bf...) stands and is scored separately",
+  "state": "gas-phase equilibrium structure, D2h bridged, singlet ground state",
+  "registered_against": "absence of any experimental gas-phase structure determination we could locate as of 2026-09-10. Blind against EXPERIMENT only; computational values exist in the literature.",
+  "predicted": {
+   "r_Be_Be_ang": {
+    "value": 2.005,
+    "uncertainty": 0.03
+   },
+   "r_Be_Hbridge_ang": {
+    "value": 1.46,
+    "uncertainty": 0.05
+   },
+   "r_Be_Hterminal_ang": {
+    "value": 1.321,
+    "uncertainty": 0.01
+   },
+   "angle_Be_Hb_Be_deg": {
+    "value": 86.7,
+    "uncertainty": 3.0
+   },
+   "dimerisation_energy_eV": {
+    "value": -1.15,
+    "uncertainty": 0.5,
+    "note": "band unchanged from v1: no measured dimerisation energy was used to validate this level, so it is not tightened",
+    "reaction": "2 BeH2(g) -> Be2H4(g), electronic, no ZPE"
+   }
+  },
+  "method": {
+   "theory": "MP2",
+   "basis": "first-principles generated, not tabulated - avoids the empirically optimised exponents a standard basis carries",
+   "constants": "derived from the model's own structure, no CODATA input",
+   "calibration": {
+    "calibrant": "BeH2 monomer",
+    "computed_r_ang": 1.33,
+    "measured_r_ang": 1.326407,
+    "offset_pct": 0.27,
+    "v1_offset_pct": -1.99
+   }
+  },
+  "bands_justified_by": {
+   "analogue": "B2H6 at this same level",
+   "errors_made_on_it_ang": {
+    "r_BB": -0.0148,
+    "r_BHb": -0.0245,
+    "r_BHt": -0.0043
+   },
+   "rule": "each band is about twice the error this level actually made on the measured analogue"
+  },
+  "falsified_if": [
+   "the equilibrium structure is not the D2h bridged form",
+   "any predicted distance falls outside its stated band",
+   "the dimerisation energy has the opposite sign"
+  ],
+  "scoring_rule": "Score every entry. Score v1 and v2 separately; do not report only whichever lands closer."
+ }
+}
